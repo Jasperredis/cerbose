@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cerbose / Docs</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <link id="style" rel="stylesheet" href="styles/default.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" alt="Cerbose logo" src="assets/logo.png">
+        <a href="https://github.com/jasperredis/cerbose-lib">GitHub</a> |
+        <a href="https://pypi.org/project/cerbose/">PyPI</a> |
+        <a href="https://jris.straw.page">jasperredis</a> --
+        <a href="index.html">Home</a> |
+        <a href="docs.html">Docs</a>
+    </header>
+
+    <main>
+        <div id="content" class="desc">
+            <p>Loading content...<br>This is loading from the GitHub repository.</p>
+        </div>
+        <script>
+            const url = "https://raw.githubusercontent.com/Jasperredis/cerbose-lib/docs/DOCS.md?token=GHSAT0AAAAAADECIJCOSOWAUIPEBQMBV6WE2CYSBVQ";
+            fetch(url)
+            .then(res => {
+                if (!res.ok) {
+                alert("Could not fetch docs. Try again later.");
+                throw new Error("Failed to fetch docs");
+                }
+                return res.text();
+            })
+            .then(md => {
+                document.getElementById("content").innerHTML = marked.parse(md);
+            })
+            .catch(err => {
+                document.getElementById("content").innerHTML = `<p>Error loading docs: ${err.message}</p>`;
+            });
+        </script>
+    </main>
+
+    <footer>
+        <p>
+            Made by jasperredis. See <a href="https://jris.straw.page">https://jris.straw.page</a><br>
+            This website is licensed under the <a href="https://opensource.org/license/mit">MIT License</a>.<br>
+            The GitHub repository for this website also includes this license.<br>
+            Cerbose, specifically the Python library mentioned on this site, is licensed separately under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU Lesser General Public License v3.0 or later</a>.<br>
+            The LGPLv3 is an extension of the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0 or later</a>, whose terms also apply to Cerbose.
+        </p>
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html">
+            <img class="footerprev" alt="GPLv3 Logo" src="https://www.gnu.org/graphics/gplv3-with-text-136x68.png"> </a>
+        <a href="https://www.gnu.org/licenses/lgpl-3.0.html">
+            <img class="footerprev" alt="LGPLv3 Logo" src="https://www.gnu.org/graphics/lgplv3-with-text-154x68.png"> </a>
+        <a href="https://jris.straw.page">
+            <img class="footerprev" alt="jasperredis banner" src="assets/jrisbanner-301x68.png"> </a>
+    </footer>
+</body>
