@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cerbose / Docs</title>
+    <meta name="description" content="Cerbose is a simple, cross-platform Python library that allows for fancy terminal text output and additional console-related features.">
+    <meta name="keywords" content="cerbose, docs, documentation, terminal, logging, coloured output, cli, jasperredis">
+    <meta name="author" content="jasperredis">
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jasperredis.github.io/cerbose/docs.html">
+
+    <!-- Social Sharing: Open Graph -->
+    <meta property="og:site_name" content="Cerbose / Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jasperredis.github.io/cerbose/docs.html">
+    <meta property="og:title" content="Cerbose / Docs">
+    <meta property="og:description" content="Cerbose is a simple, cross-platform Python library that allows for fancy terminal text output and additional console-related features.">
+    <meta property="og:image" content="https://jasperredis.github.io/cerbose/assets/logodocs.png">
+
+    <!-- Social Sharing: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://jasperredis.github.io/cerbose/docs.html">
+    <meta name="twitter:title" content="Cerbose / Docs">
+    <meta name="twitter:description" content="Cerbose is a simple, cross-platform Python library that allows for fancy terminal text output and additional console-related features.">
+    <meta name="twitter:image" content="https://jasperredis.github.io/cerbose/assets/logodocs.png">
+
+    <!-- UI / UX -->
+    <meta name="theme-color" content="#131313">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Styles -->
+    <link id="style" rel="stylesheet" href="styles/default.css">
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img id="ts" class="themes" alt="Theme Switcher" src="assets/dark.svg" onclick="theme()">
+        <img id="logo" class="logo" alt="Cerbose logo" src="assets/logodocs.svg">
+        <script>
+            function theme() {
+                if (document.getElementById("style").getAttribute("href") == "styles/default.css") {
+                    document.getElementById("style").setAttribute("href", "styles/light.css"); 
+                    document.getElementById("logo").setAttribute("src", "assets/logodocslight.svg"); 
+                    document.getElementById("ts").setAttribute("src", "assets/light.svg"); 
+                } else if (document.getElementById("style").getAttribute("href") == "styles/light.css") {
+                    document.getElementById("style").setAttribute("href", "styles/none.css"); 
+                    document.getElementById("logo").setAttribute("src", "assets/logodocslight.svg"); 
+                    document.getElementById("ts").setAttribute("src", "assets/none.svg"); 
+                } else {
+                    document.getElementById("style").setAttribute("href", "styles/default.css"); 
+                    document.getElementById("logo").setAttribute("src", "assets/logodocs.svg"); 
+                    document.getElementById("ts").setAttribute("src", "assets/dark.svg"); 
+                }
+            }
+        </script>
+        <a href="https://github.com/jasperredis/cerbose-lib">GitHub</a> |
+        <a href="https://github.com/jasperredis/cerbose">Website Repository</a> |
+        <a href="https://pypi.org/project/cerbose/">PyPI</a> |
+        <a href="https://jris.straw.page">jasperredis</a> --
+        <a href="index.html">Home</a> |
+        <a href="docs.html">Docs</a>
+    </header>
+        <a href="https://github.com/jasperredis/cerbose-lib">GitHub</a> |
+        <a href="https://github.com/jasperredis/cerbose">Website Repository</a> |
+        <a href="https://pypi.org/project/cerbose/">PyPI</a> |
+        <a href="https://jris.straw.page">jasperredis</a> --
+        <a href="index.html">Home</a> |
+        <a href="docs.html">Docs</a>
+    </header>
+
+    <main>
+        <script>
+            function loadu(ite) {
+                let url = "https://raw.githubusercontent.com/Jasperredis/cerbose-lib/refs/heads/main/docs/" + ite;
+                fetch(url)
+                .then(res => {
+                    if (!res.ok) {
+                    alert("Could not fetch docs. Try again later.");
+                    throw new Error("Failed to fetch docs");
+                    }
+                    return res.text();
+                })
+                .then(md => {
+                    document.getElementById("content").innerHTML = marked.parse(md);
+                })
+                .catch(err => {
+                    document.getElementById("content").innerHTML = `<p>Error loading docs: ${err.message}</p>`;
+                });
+            }
+        </script>
+        <div class="filesel">
+            <p onclick="loadu('1.md')">START (1.md)</p>
+            <p onclick="loadu('2.md')">2.md</p>
+            <p onclick="loadu('3.md')">3.md</p>
+            <p onclick="loadu('4.md')">4.md</p>
+            <p onclick="loadu('internal_subsitute.md')">internal_subsitute.md</p>
+            <p onclick="loadu('cprint.md')">cprint.md</p>
+            <p onclick="loadu('cerbar.md')">cerbar.md</p>
+            <p onclick="loadu('cin.md')">cin.md</p>
+            <p onclick="loadu('5-9.md')">5-9.md</p>
+            <p onclick="loadu('6-10.md')">6-10.md</p>
+        </div>
+        <div id="content" class="desc">
+            <p>Loading content...<br>This is loading from the GitHub repository.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            Made by jasperredis. See <a href="https://jris.straw.page">https://jris.straw.page</a><br>
+            This website is licensed under the <a href="https://opensource.org/license/mit">MIT License</a>.<br>
+            The GitHub repository for this website also includes this license.<br>
+            Cerbose, specifically the Python library mentioned on this site, is licensed separately under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU Lesser General Public License v3.0 or later</a>.<br>
+            The LGPLv3 is an extension of the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0 or later</a>, whose terms also apply to Cerbose.
+        </p>
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html">
+            <img class="footerprev" alt="GPLv3 Logo" src="https://www.gnu.org/graphics/gplv3-with-text-136x68.png"> </a>
+        <a href="https://www.gnu.org/licenses/lgpl-3.0.html">
+            <img class="footerprev" alt="LGPLv3 Logo" src="https://www.gnu.org/graphics/lgplv3-with-text-154x68.png"> </a>
+        <a href="https://jris.straw.page">
+            <img class="footerprev" alt="jasperredis banner" src="assets/jrisbanner-301x68.png"> </a>
+    </footer>
+</body>
