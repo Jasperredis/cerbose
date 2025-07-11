@@ -10,8 +10,27 @@
 </head>
 <body>
     <header>
-        <img class="logo" alt="Cerbose logo" src="assets/logo.png">
+        <img id="ts" class="themes" alt="Theme Switcher" src="assets/dark.svg" onclick="theme()">
+        <img id="logo" class="logo" alt="Cerbose logo" src="assets/logo.svg">
+        <script>
+            function theme() {
+                if (document.getElementById("style").getAttribute("href") == "styles/default.css") {
+                    document.getElementById("style").setAttribute("href", "styles/light.css"); 
+                    document.getElementById("logo").setAttribute("src", "assets/logolight.svg"); 
+                    document.getElementById("ts").setAttribute("src", "assets/light.svg"); 
+                } else if (document.getElementById("style").getAttribute("href") == "styles/light.css") {
+                    document.getElementById("style").setAttribute("href", "styles/none.css"); 
+                    document.getElementById("logo").setAttribute("src", "assets/logolight.svg"); 
+                    document.getElementById("ts").setAttribute("src", "assets/none.svg"); 
+                } else {
+                    document.getElementById("style").setAttribute("href", "styles/default.css"); 
+                    document.getElementById("logo").setAttribute("src", "assets/logo.svg"); 
+                    document.getElementById("ts").setAttribute("src", "assets/dark.svg"); 
+                }
+            }
+        </script>
         <a href="https://github.com/jasperredis/cerbose-lib">GitHub</a> |
+        <a href="https://github.com/jasperredis/cerbose">Website Repository</a> |
         <a href="https://pypi.org/project/cerbose/">PyPI</a> |
         <a href="https://jris.straw.page">jasperredis</a> --
         <a href="index.html">Home</a> |
@@ -19,26 +38,40 @@
     </header>
 
     <main>
+        <script>
+            function loadu(ite) {
+                let url = "https://raw.githubusercontent.com/Jasperredis/cerbose-lib/refs/heads/main/docs/" + ite;
+                fetch(url)
+                .then(res => {
+                    if (!res.ok) {
+                    alert("Could not fetch docs. Try again later.");
+                    throw new Error("Failed to fetch docs");
+                    }
+                    return res.text();
+                })
+                .then(md => {
+                    document.getElementById("content").innerHTML = marked.parse(md);
+                })
+                .catch(err => {
+                    document.getElementById("content").innerHTML = `<p>Error loading docs: ${err.message}</p>`;
+                });
+            }
+        </script>
+        <div class="filesel">
+            <p onclick="loadu('1.md')">START (1.md)</p>
+            <p onclick="loadu('2.md')">2.md</p>
+            <p onclick="loadu('3.md')">3.md</p>
+            <p onclick="loadu('4.md')">4.md</p>
+            <p onclick="loadu('internal_subsitute.md')">internal_subsitute.md</p>
+            <p onclick="loadu('cprint.md')">cprint.md</p>
+            <p onclick="loadu('cerbar.md')">cerbar.md</p>
+            <p onclick="loadu('cin.md')">cin.md</p>
+            <p onclick="loadu('5-9.md')">5-9.md</p>
+            <p onclick="loadu('6-10.md')">6-10.md</p>
+        </div>
         <div id="content" class="desc">
             <p>Loading content...<br>This is loading from the GitHub repository.</p>
         </div>
-        <script>
-            const url = "https://raw.githubusercontent.com/Jasperredis/cerbose-lib/docs/DOCS.md?token=GHSAT0AAAAAADECIJCOSOWAUIPEBQMBV6WE2CYSBVQ";
-            fetch(url)
-            .then(res => {
-                if (!res.ok) {
-                alert("Could not fetch docs. Try again later.");
-                throw new Error("Failed to fetch docs");
-                }
-                return res.text();
-            })
-            .then(md => {
-                document.getElementById("content").innerHTML = marked.parse(md);
-            })
-            .catch(err => {
-                document.getElementById("content").innerHTML = `<p>Error loading docs: ${err.message}</p>`;
-            });
-        </script>
     </main>
 
     <footer>
