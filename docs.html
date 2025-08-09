@@ -71,7 +71,7 @@
     <main>
         <script>
             function loadu(ite) {
-                let url = "https://raw.githubusercontent.com/Jasperredis/cerbose-lib/refs/heads/main/docs/" + ite;
+                let url = "https://raw.githubusercontent.com/Jasperredis/cerbose-lib/refs/heads/main/" + ite;
                 fetch(url)
                 .then(res => {
                     if (!res.ok) {
@@ -89,18 +89,18 @@
             }
         </script>
         <div class="filesel">
-            <p onclick="loadu('1.md')">START (1.md)</p>
-            <p onclick="loadu('2.md')">Installation (2.md)</p>
-            <p onclick="loadu('3.md')">Post-Installation (3.md)</p>
-            <p onclick="loadu('4.md')">Functions (4.md)</p>
-            <p onclick="loadu('internal_subsitute.md')">internal_subsitute.md</p>
-            <p onclick="loadu('cprint.md')">cprint.md</p>
-            <p onclick="loadu('cerbar.md')">cerbar.md</p>
-            <p onclick="loadu('cin.md')">cin.md</p>
-            <p onclick="loadu('config.md')">config.md</p>
-            <p onclick="loadu('issues.md')">Known Issues (issues.md)</p>
-            <p onclick="loadu('contrib.md')">Contributing (contrib.md)</p>
-            <p onclick="loadu('8-12.md')">Ending (8-12.md)</p>
+            <p onclick="loadu('docs/1.md')">START (1.md)</p>
+            <p onclick="loadu('docs/2.md')">Installation (2.md)</p>
+            <p onclick="loadu('docs/3.md')">Post-Installation (3.md)</p>
+            <p onclick="loadu('docs/4.md')">Functions (4.md)</p>
+            <p onclick="loadu('docs/internal_subsitute.md')">internal_subsitute.md</p>
+            <p onclick="loadu('docs/cprint.md')">cprint.md</p>
+            <p onclick="loadu('docs/cerbar.md')">cerbar.md</p>
+            <p onclick="loadu('docs/cin.md')">cin.md</p>
+            <p onclick="loadu('docs/config.md')">config.md</p>
+            <p onclick="loadu('docs/issues.md')">Known Issues (issues.md)</p>
+            <p onclick="loadu('CONTRIBUTING.md')">Contributing</p>
+            <p onclick="loadu('docs/8-12.md')">Ending (8-12.md)</p>
         </div>
         <div id="content" class="desc">
             <p>Loading content...<br>This is loading from the GitHub repository.</p>
