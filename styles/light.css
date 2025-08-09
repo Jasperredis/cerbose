@@ -110,6 +110,11 @@ a:hover {
     filter: blur(0.5px);
     transition: all 0.2s ease;
 }
+.updates {
+    background-color: #772b2b;
+    color: #ffffff;
+    padding: 0.1%;
+}
 @media screen and (max-width: 768px) {
     .desc {
         padding: 2% 5%;

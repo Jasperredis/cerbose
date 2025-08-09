@@ -1,3 +1,5 @@
+<!-- Under the MIT license. See LICENSE file at project root for info. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,58 +38,27 @@
     <link id="style" rel="stylesheet" href="styles/default.css">
 
     <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="js/docs.js" defer></script>
 </head>
 
 <body>
     <header>
         <img id="ts" class="themes" alt="Theme Switcher" src="assets/dark.svg" onclick="theme()">
         <img id="logo" class="logo" alt="Cerbose logo" src="assets/logodocs.svg">
-        <script>
-            function theme() {
-                if (document.getElementById("style").getAttribute("href") == "styles/default.css") {
-                    document.getElementById("style").setAttribute("href", "styles/light.css"); 
-                    document.getElementById("logo").setAttribute("src", "assets/logodocslight.svg"); 
-                    document.getElementById("ts").setAttribute("src", "assets/light.svg"); 
-                } else if (document.getElementById("style").getAttribute("href") == "styles/light.css") {
-                    document.getElementById("style").setAttribute("href", "styles/none.css"); 
-                    document.getElementById("logo").setAttribute("src", "assets/logodocslight.svg"); 
-                    document.getElementById("ts").setAttribute("src", "assets/none.svg"); 
-                } else {
-                    document.getElementById("style").setAttribute("href", "styles/default.css"); 
-                    document.getElementById("logo").setAttribute("src", "assets/logodocs.svg"); 
-                    document.getElementById("ts").setAttribute("src", "assets/dark.svg"); 
-                }
-            }
-        </script>
         <a href="https://github.com/jasperredis/cerbose-lib">GitHub</a> |
         <a href="https://github.com/jasperredis/cerbose">Website Repository</a> |
         <a href="https://pypi.org/project/cerbose/">PyPI</a> |
         <a href="https://jris.straw.page">jasperredis</a> --
         <a href="index.html">Home</a> |
         <a href="docs.html">Docs</a>
+        <br><br>
+        <div class="updates">
+            <p>Added URL params for doc pages and this updates box. Cerbose now has a CONTRIBUTING.md!</p>
+        </div>
     </header>
 
     <main>
-        <script>
-            function loadu(ite) {
-                let url = "https://raw.githubusercontent.com/Jasperredis/cerbose-lib/refs/heads/main/" + ite;
-                fetch(url)
-                .then(res => {
-                    if (!res.ok) {
-                    alert("Could not fetch docs. Try again later.");
-                    throw new Error("Failed to fetch docs");
-                    }
-                    return res.text();
-                })
-                .then(md => {
-                    document.getElementById("content").innerHTML = marked.parse(md);
-                })
-                .catch(err => {
-                    document.getElementById("content").innerHTML = `<p>Error loading docs: ${err.message}</p>`;
-                });
-            }
-        </script>
         <div class="filesel">
             <p onclick="loadu('docs/1.md')">START (1.md)</p>
             <p onclick="loadu('docs/2.md')">Installation (2.md)</p>
@@ -100,10 +71,11 @@
             <p onclick="loadu('docs/config.md')">config.md</p>
             <p onclick="loadu('docs/issues.md')">Known Issues (issues.md)</p>
             <p onclick="loadu('CONTRIBUTING.md')">Contributing</p>
-            <p onclick="loadu('docs/8-12.md')">Ending (8-12.md)</p>
+            <p onclick="loadu('docs/8-12.md', )">Ending (8-12.md)</p>
         </div>
+        <p id="copylink" class="desc">Link to copy (will turn into link when a doc is selected)</p>
         <div id="content" class="desc">
-            <p>Loading content...<br>This is loading from the GitHub repository.</p>
+            <p>Content will be loaded when a doc is selected..</p>
         </div>
     </main>
 
