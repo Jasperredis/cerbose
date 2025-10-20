@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "program": "Cerbose",
+        "author": "jasperredis"
+    },
+    "tags": {
+        "colours": {
+            "none": "white",
+            "ok": "green",
+            "note": "cyan",
+            "warn": "yellow",
+            "error": "red",
+            "debug": "magenta",
+            "info": "cyan",
+            "input": "lightblue",
+            "load": "red",
+            "pause": "yellow",
+            "stat": "magenta",
+            "fatal": "red",
+            "trace": "magenta",
+            "proc": "magenta"
+        },
+        "text": {
+            "none": "NONE",
+            "ok": "OK",
+            "note": "NOTE",
+            "warn": "WARN",
+            "error": "ERROR",
+            "debug": "DEBUG",
+            "info": "INFO",
+            "input": "INPUT",
+            "load": "LOAD",
+            "pause": "PAUSE",
+            "stat": "STAT",
+            "fatal": "FATAL",
+            "trace": "TRACE",
+            "proc": "PROC"
+        },
+        "symbols": {
+            "bracket left": "[",
+            "bracket right": "]",
+            "text divisor": ":"
+        }
+    },
+    "cerbar": {
+        "bracket left": "[",
+        "bracket right": "]",
+        "fill symbol": "#",
+        "empty symbol": "-"
+    },
+    "space-repeat-tolerance": 5,
+    "timeformat": "%H:%M:%S"
+}
