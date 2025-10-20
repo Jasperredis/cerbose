@@ -17,3 +17,6 @@ General patches and maintainability updates:
 - Used black to format to PEP 8.
 
 Yes, this was copied from the commit message, but that's because said commit message was concise and explained what this did well.
+
+## 1.0.1.post1
+Updated repository link in pyproject.toml to new repository.
