@@ -16,7 +16,7 @@ dependencies = ["colorama>=0.4.6"]
 [project.urls]
 Homepage = "https://jasperredis.github.io/cerbose"
 Docs = "https://jasperredis.github.io/cerbose/docs.html"
-Repository = "https://github.com/jasperredis/cerbose-lib"
+Repository = "https://github.com/jasperredis/cerbose"
 PyPI = "https://pypi.org/project/cerbose/"
 jasperredis = "https://jris.straw.page"
 
