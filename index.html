@@ -1,0 +1,152 @@
+<!-- Under the MIT license. See LICENSE file at project root for info. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cerbose</title>
+    <meta name="description" content="Cerbose is a simple, cross-platform Python library that allows for fancy terminal text output and additional console-related features.">
+    <meta name="keywords" content="cerbose, python, terminal, logging, coloured output, cli, jasperredis">
+    <meta name="author" content="jasperredis">
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jasperredis.github.io/cerbose/">
+
+    <!-- Social Sharing: Open Graph -->
+    <meta property="og:site_name" content="Cerbose">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jasperredis.github.io/cerbose/">
+    <meta property="og:title" content="Cerbose">
+    <meta property="og:description" content="Cerbose is a simple, cross-platform Python library that allows for fancy terminal text output and additional console-related features.">
+    <meta property="og:image" content="https://jasperredis.github.io/cerbose/assets/logo.png">
+
+    <!-- Social Sharing: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://jasperredis.github.io/cerbose/">
+    <meta name="twitter:title" content="Cerbose">
+    <meta name="twitter:description" content="Cerbose is a simple, cross-platform Python library that allows for fancy terminal text output and additional console-related features.">
+    <meta name="twitter:image" content="https://jasperredis.github.io/cerbose/assets/logo.png">
+
+    <!-- UI / UX -->
+    <meta name="theme-color" content="#131313">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Files -->
+    <link id="style" rel="stylesheet" href="styles/default.css">
+    <script src="js/index.js" defer></script> 
+</head>
+
+<body>
+    <header>
+        <img id="ts" class="themes" alt="Theme Switcher" src="assets/dark.svg" onclick="theme()">
+        <img id="logo" class="logo" alt="Cerbose logo" src="assets/logo.svg">
+        <a href="https://github.com/jasperredis/cerbose-lib">GitHub</a> |
+        <a href="https://github.com/jasperredis/cerbose">Website Repository</a> |
+        <a href="https://pypi.org/project/cerbose/">PyPI</a> |
+        <a href="https://jris.straw.page">jasperredis</a> --
+        <a href="index.html">Home</a> |
+        <a href="docs.html">Docs</a>
+        <br><br>
+        <div class="updates">
+            <p>Added URL params for doc pages and this updates box. Cerbose now has a CONTRIBUTING.md!</p>
+        </div>
+    </header>
+
+    <main class="desc">
+        <h1>What is Cerbose?</h1>
+        <p>Cerbose is a simple, cross-platform Python library that allows for fancy terminal text output and additional console-related features.</p>
+
+        <h1>Showcase</h1>
+        <img class="prev" src="assets/test.png" alt="Test script output showcasing Cerbose functions">
+        <p>Presented to you is an image of a test script, showcasing the following functions in Cerbose:</p>
+        <ul>
+            <li><code>cprint</code> — Tagged text, such as the <code>[OK]:</code> text preceding messages.</li>
+            <li><code>cerbar</code> — A simple progress bar function, like the <code>[############--------]</code> in the message with the <code>[STAT]</code> tag.</li>
+            <li><code>cin</code> — A simple function to take ✨stylish✨ user input in the terminal, such as the <code>[WARN][INFO]: Give feedback on the frogs.:</code> with an input spot.</li>
+        </ul>
+
+        <h1>Where to Get Cerbose?</h1>
+        <p>Get Cerbose and more information on it at:</p>
+        <ul>
+            <li>The <a href="https://github.com/jasperredis/cerbose-lib">GitHub repository</a></li>
+            <li>The <a href="https://pypi.org/project/cerbose/">PyPI project</a></li>
+            <li>The <a href="docs.html">documentation</a></li>
+        </ul>
+
+        <h1>Functions</h1>
+        <h2>cprint</h2>
+        <p><code>cprint</code> is Cerbose's main function; it outputs highly configurable, tagged text to the terminal. cprint has the following options in each call:</p>
+        <ul>
+            <li><strong>NOTE: The documentation has more information.</strong></li>
+            <li><strong>Required:</strong></li>
+            <li><code>type</code>: The tag the output uses.</li>
+            <li><code>text</code>: The actual text in the output.</li>
+            <li><strong>Optional:</strong></li>
+            <li><code>logfile</code>: Logs the output to a specified file.</li>
+            <li><code>textcol</code>: Changes the colour of the text.</li>
+            <li><code>stagtype</code>: Adds a second tag to the output.</li>
+            <li><code>timestamp</code>: Adds a timestamp preceding the tags in the output.</li>
+            <li><code>valonly</code>: Returns a value containing the output instead of printing it.</li>
+        </ul>
+        <h2>mprint</h2>
+        <p><code>mprint</code> is essentially the same function as <code>cprint</code>, except it supports multiline output.</p>
+        <h2>cerbar</h2>
+        <p><code>cerbar</code> is a function that can easily make ASCII progress bars to output in the terminal. cerbar has the following options in each call:</p>
+        <ul>
+            <li><strong>NOTE: The documentation has more information.</strong></li>
+            <li><strong>Required:</strong></li>
+            <li><code>length</code>: How many characters long the bar is (not including borders).</li>
+            <li><code>total</code>: The total value the bar represents (unshaded and shaded).</li>
+            <li><code>fill</code>: How much of the total is filled in (NOT A PERCENTAGE).</li>
+            <li><strong>Optional:</strong></li>
+            <li><code>perc</code>: Adds the percentage filled either before or after the progress bar.</li>
+            <li><code>count</code>: Adds a counter (fill/total) either before or after the progress bar.</li>
+        </ul>
+        <h2>cin</h2>
+        <p><code>cin</code> is a function to take stylised user input. It returns what the user inputted. cin has the following options in each call:</p>
+        <ul>
+            <li><strong>NOTE: The documentation has more information.</strong></li>
+            <li><strong>Required:</strong></li>
+            <li><code>text</code>is the same as in <code>cprint</code> and <code>tag</code> is the same as <code>type</code> in <code>cprint</code>.</li>
+            <li><code>options</code>: The possible options that can be inputted (or <code>'any'</code> for any input).</li>
+            <li><strong>Optional:</strong></li>
+            <li><code>logfile</code>, <code>logfeedback</code>, <code>textcol</code>, <code>stagtype</code>, and <code>timestamp</code> are the same as in <code>cprint</code>.</li>
+            <li><code>lower</code>: Recieves user input in lowercase.</li>
+            <li><code>showop</code>: If False, hides options from <code>'o'/'opt'</code> mode..</li>
+        </ul>
+        <h2>Other</h2>
+        <p>Cerbose has other functions, however these are the main, meaningful functions.</p>
+        <h1>Configuration</h1>
+        <p>Cerbose's config files allow the following to be configured:</p>
+        <ul>
+            <li>Tag colours.</li>
+            <li>Tag text.</li>
+            <li>Custom tags.</li>
+            <li>Symbols (e.g., brackets in tags/cerbar, fill-in in cerbar, etc.)</li>
+            <li>Space repeat tolerance (how many times alignment settings can repeat before Cerbose tries to reset it)</li>
+            <li>Time format in timestamps.</li>
+        </ul>
+        <h1>Language & Base</h1>
+        <p>Cerbose is made in Python and uses the <code>colorama</code> library.</p>
+    </main>
+    <br>
+    <footer>
+        <p>
+            Made by jasperredis. See <a href="https://jris.straw.page">https://jris.straw.page</a><br>
+            This website is licensed under the <a href="https://opensource.org/license/mit">MIT License</a>.<br>
+            The GitHub repository for this website also includes this license.<br>
+            Cerbose, specifically the Python library mentioned on this site, is licensed separately under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU Lesser General Public License v3.0 or later</a>.<br>
+            The LGPLv3 is an extension of the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0 or later</a>, whose terms also apply to Cerbose.
+        </p>
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html">
+            <img class="footerprev" alt="GPLv3 Logo" src="https://www.gnu.org/graphics/gplv3-with-text-136x68.png"> </a>
+        <a href="https://www.gnu.org/licenses/lgpl-3.0.html">
+            <img class="footerprev" alt="LGPLv3 Logo" src="https://www.gnu.org/graphics/lgplv3-with-text-154x68.png"> </a>
+        <a href="https://jris.straw.page">
+            <img class="footerprev" alt="jasperredis banner" src="assets/jrisbanner-301x68.png"> </a>
+    </footer>
+</body>
+</html>
