@@ -28,7 +28,7 @@ function dash2slash(fromm, str) {
 
 function loadu(ite) {
     console.log("aaa");
-    let url = "https://raw.githubusercontent.com/Jasperredis/cerbose/refs/heads/main/" + ite;
+    let url = "https://raw.githubusercontent.com/Jasperredis/cerbose/refs/heads/main/" + ite; // please work
     fetch(url)
     .then(res => {
         if (!res.ok) {
