@@ -1,7 +1,7 @@
 ![Cerbose Logo](.readme/logo.png)
 <p align="center">
   <img alt="Language: Python" src="https://img.shields.io/badge/Language-Python-purple?style=flat-square">
-  <img alt="Version: 1.0.0" src="https://img.shields.io/badge/Version-Beta_1.0-green?style=flat-square">
+  <img alt="Version: 1.0.1" src="https://img.shields.io/badge/Version-1.0.1-green?style=flat-square">
   <img alt="Devlopment Stage: Early Beta" src="https://img.shields.io/badge/Development_Stage-Early_Beta-orange?style=flat-square">
   <img alt="License: LGPLv3" src="https://img.shields.io/badge/License-LGPLv3-blue?style=flat-square">
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"><br>
