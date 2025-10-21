@@ -10,7 +10,7 @@ This means that type and text are the first two required arguments, and the rest
 `type` defines the "tag" the output uses.  
 
 Here is an output of text from Cerbose (examples/test.py)  
-![Image didn't load. See https://github.com/Jasperredis/cerbose-lib/blob/main/docs/images/a.png](assets/docs/a.png)  
+![Image didn't load. See https://github.com/Jasperredis/cerbose/blob/main/docs/images/a.png](assets/docs/a.png)  
 You should be able to see the parts in brackets. Those are tags.  
 Assuming you are using the default configuration, there are 14 of them. That number varies by your configuration, but you will always have at least 1 (if you don't want errors, that is).
 
