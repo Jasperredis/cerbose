@@ -1,7 +1,7 @@
 ![Cerbose Logo](.readme/logo.png)
 <p align="center">
   <img alt="Language: Python" src="https://img.shields.io/badge/Language-Python-purple?style=flat-square">
-  <img alt="Version: 1.0.1" src="https://img.shields.io/badge/Version-1.0.1-green?style=flat-square">
+  <img alt="Version: 2.0.0" src="https://img.shields.io/badge/Version-1.0.1-green?style=flat-square">
   <img alt="Devlopment Stage: Early Beta" src="https://img.shields.io/badge/Development_Stage-Early_Beta-orange?style=flat-square">
   <img alt="License: LGPLv3" src="https://img.shields.io/badge/License-LGPLv3-blue?style=flat-square">
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"><br>
@@ -30,7 +30,7 @@ This is the highlight function of Cerbose. It outputs highly configurable tagged
 - Text colour
 - Dual tags
 - Timestamp (enabled?)
-- And more through configuration files.  
+- And more through configuration.  
 
 It also has a "valonly" mode where it returns the suppposed output instead of printing it.  
 More info in [the documentation](docs/DOCS.md).
@@ -48,24 +48,22 @@ Returns an ASCII progress bar. You can configure the following:
 
 More info in [the documentation](docs/DOCS.md).
 
-## cin
+## cquery
 Takes user input and returns the input. You can configure the following:
 - Prompt (obviously)
 - All options for `cprint` in the prompt.
 - 'i' and 'o' mode. 'i' allows any text input (remember to set options to 'any'!), and 'o' has a strict set of options.
-- Recieving user input as lowercase (enabled?)
+- Recieving user input as lowercase (enabled?)  
 
 More info in [the documentation](docs/DOCS.md).
 
 # Configuration
-Cerbose can be more highly configured via config files. As always, [the documentation](docs/DOCS.md) has the best information on this, but here is roughly what you can configure with these:
+Cerbose can be more highly configured via config variables/functions. As always, [the documentation](docs/DOCS.md) has the best information on this, but here is roughly what you can configure with these:
 - Tag colours
 - Tag text
 - Symbols (brackets, cerbar contents, etc.)
 - Timestamp format
-- Space repeat tolerance (check [documentation](docs/DOCS.md))
-
-Cerbose config files are in JSON format.
+- Space repeat tolerance (check [documentation](docs/DOCS.md))  
 
 # Licensing
 Always, for more information related to licenses in Cerbose, check the [LICENSE](LICENSE) file in the project root and the files it refers to.
@@ -73,10 +71,10 @@ Always, for more information related to licenses in Cerbose, check the [LICENSE]
 - Cerbose, the Python script itself, is licensed under the GNU Lesser General Public License v3.0 or later. What constitutes as the script itself is any file in the src/ directory of this repository.
   + See the [LICENSE-LGPL](LICENSE-LGPL) file for more info.
   + The LGPLv3 is an extension of the GNU General Public License v3. See the [LICENSE-GPL](LICENSE-GPL) file for more info.
-- All other files, with reasonable exception of license-related files (e.g., docs, examples) are under the MIT License.
+- All other files (e.g., docs, examples), with reasonable exception of license-related files are under the MIT License.
   + See the [LICENSE-MIT](LICENSE-MIT) file for more info.
 
-**REMINDER**: The best source of information in Cerbose (and most other projects you will encounter) is the [LICENSE](LICENSE) file at the project root.
+**REMINDER**: The best source of licensing information in Cerbose (and most other projects you will encounter) is the [LICENSE](LICENSE) file at the project root.
 
 <h2 align="center">
   Primarily made by:<br><br>

@@ -77,6 +77,7 @@ $ source venv/bin/activate  # do "venv\Scripts\activate" if you use Windows
 $ black src/cerbose/*
 ```
 - Name functions and variables with snake_case.
+- Use British English in variables, functions, docs, and comments (for consistency).
 
 > Note: You can make a contribution to fix code that doesn't do this.
 
