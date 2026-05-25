@@ -32,7 +32,7 @@ This is the highlight function of Cerbose. It outputs highly configurable tagged
 - Timestamp (enabled?)
 - And more through configuration.  
 
-It also has a "valonly" mode where it returns the suppposed output instead of printing it.  
+It also has a "as_string" mode where it returns the suppposed output instead of printing it.  
 More info in [the documentation](docs/DOCS.md).
 
 ## mprint
