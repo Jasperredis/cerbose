@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-# Cerbose v2.0.0 | made by jasperredis | LGPLv3 (see LICENSE)
+# Cerbose v2.0.0.post1 | made by jasperredis | LGPLv3 (see LICENSE)
 # A simple Python library for making colourful, tagged terminal output, along with additional console features.
 #
 # LICENSE: LGPL v3 (View in LICENSE-LGPL file in library root or at <https://www.gnu.org/licenses/lgpl-3.0.html>)
@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this library. If not, see <https://www.gnu.org/licenses/>.
 
-__version__ = "2.0.0"
+__version__ = "2.0.0.post1"
 
 # Libraries
 import os

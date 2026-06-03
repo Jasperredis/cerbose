@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-# Cerbose v2.0.0 | made by jasperredis | LGPLv3 (see LICENSE)
+# Cerbose v2.0.0.post1 | made by jasperredis | LGPLv3 (see LICENSE)
 # dict of easy names for colours
 
-__version__ = "2.0.0"
+__version__ = "2.0.0.post1"
 
 from colorama import Fore
 

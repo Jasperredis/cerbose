@@ -56,3 +56,8 @@ Near-entire rewrite, several breaking changes, new function, and more:
 - Updated `examples/test.py` to use the new names of everything.
 - Updated the website to use the new names of everything.
 - Removed `examples/config.json` as file support no longer exists.
+
+
+## 2.0.0.post1
+- Updated URL ( now https://cerbose.jasperredis.net )
+- Deleted accidental duplicate of test.py
