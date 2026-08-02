@@ -5,12 +5,12 @@
   <img alt="License: LGPLv3" src="https://img.shields.io/badge/License-LGPLv3-blue?style=flat-square">
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"><br>
   Cerbose is a simple, cross-platform Python library, mainly for making tagged, colourful console output along with additional features.<br>
-  <a href="https://cerbose.jasperredis.net">Website</a> |
+  <a href="https://www.jasperredis.net/projects/cerbose/index.html">Website</a> |
   <a href="https://pypi.org/project/cerbose">PyPI</a> |
   <a href="https://jris.straw.page">jasperredis</a><br>
   Made by jasperredis [o]:
   <br><br>
-  It is highly reccomended to check <a href="https://cerbose.jasperredis.net">the website.</a>
+  It is highly reccomended to check <a href="https://www.jasperredis.net/projects/cerbose/index.html">the website.</a>
 </p>
 
 ---
