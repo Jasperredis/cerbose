@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cerbose"
-version = "2.0.0.post1"
-description = "A simple Python library for making colourful, tagged terminal output, along with additional console features."
+version = "2.0.0.post2"
+description = "Cerbose is a simple, highly customisable, cross-platform Python logging library that allows for fancy terminal text output, log message tagging, file logging, and additional console-related features, such as cerbar, an ASCII progress bar generator, and more."
 authors = [{name = "jasperredis"}]
 requires-python = ">=3.7"
 license = {text = "LGPL-3.0-or-later"}
@@ -14,11 +14,11 @@ keywords = ["terminal", "colors", "progress bar", "console", "input"]
 dependencies = ["colorama>=0.4.6"]
 
 [project.urls]
-Homepage = "https://cerbose.jasperredis.net"
-Docs = "https://cerbose.jasperredis.net/docs.html"
-Repository = "https://github.com/jasperredis/cerbose"
+Homepage = "https://jasperredis.net/projects/cerbose/index.html"
+Docs = "https://codeberg.org/jasperredis/cerbose/src/branch/main/docs"
+Repository = "https://codeberg.org/jasperredis/cerbose"
 PyPI = "https://pypi.org/project/cerbose/"
-jasperredis = "https://jris.straw.page"
+jasperredis = "https://jasperredis.net"
 
 [tool.setuptools.packages.find]
 where = ["src"]

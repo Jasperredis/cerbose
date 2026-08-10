@@ -7,7 +7,9 @@
   Cerbose is a simple, cross-platform Python library, mainly for making tagged, colourful console output along with additional features.<br>
   <a href="https://www.jasperredis.net/projects/cerbose/index.html">Website</a> |
   <a href="https://pypi.org/project/cerbose">PyPI</a> |
-  <a href="https://jris.straw.page">jasperredis</a><br>
+  <a href="https://jasperredis.net">jasperredis</a> |
+  <a href="https://codeberg.org/jasperredis/cerbose">Cerbose</a> |
+  <a href="https://github.com/Jasperredis/cerbose">GitHub mirror</a><br>
   Made by jasperredis [o]:
   <br><br>
   It is highly reccomended to check <a href="https://www.jasperredis.net/projects/cerbose/index.html">the website.</a>
@@ -17,8 +19,8 @@
 ![Test Preview Image](.readme/test.png)
 > This wasn't done in a codeblock because they can't display colours.
 
-- For contributing, see CONTRIBUTING.md on the GitHub repo.
-- For the changelog, see CHANGELOG.md on the GitHub repo.
+- For contributing, see CONTRIBUTING.md on the Codeberg repo.
+- For the changelog, see CHANGELOG.md on the Codeberg repo.
 
 # Functions
 ## cprint
