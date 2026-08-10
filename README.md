@@ -15,6 +15,11 @@
   It is highly reccomended to check <a href="https://www.jasperredis.net/projects/cerbose/index.html">the website.</a>
 </p>
 
+## Note!
+This repository was recently (as of 2026-08-10) migrated from GitHub to Codeberg.
+The GitHub repository is a mirror, and the Codeberg repository can be found [here](https://codeberg.org/jasperredis/cerbose).
+To see the mirror, go [here](https://github.com/Jasperredis/cerbose).
+
 ---
 ![Test Preview Image](.readme/test.png)
 > This wasn't done in a codeblock because they can't display colours.
