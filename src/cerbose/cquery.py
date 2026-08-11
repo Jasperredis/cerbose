@@ -1,12 +1,12 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
+# Cerbose v2.0.1 | made by jasperredis | LGPLv3 (see LICENSE)
+# cquery/cin module
 
-# Cerbose v2.0.0.post1 | made by jasperredis | LGPLv3 (see LICENSE)
-# cquery module
-
-__version__ = "2.0.0.post1"
+__version__ = "2.0.1"
 
 # Import modules
 from .cprint import cprint, mprint
+
 
 def _get_cquery(options, cprint, lower):
     while True:
@@ -19,6 +19,7 @@ def _get_cquery(options, cprint, lower):
             break
     return ans
 
+
 def cquery(
     tag,
     text,
@@ -26,13 +27,13 @@ def cquery(
     *,
     text_colour="normal",
     subtag=None,
-    timestamp=False,
+    timestamp=None,
     log_file=None,
     lower=False,
     show_opts=False,
 ):
     """
-    Take user input. https://jasperredis.github.io/cerbose/docs.html?page=docs-cin.md
+    Take user input.
     """
     print_text = text
     if show_opts and options != "*":  # Print options
@@ -40,7 +41,7 @@ def cquery(
         for item in options:
             count += 1
             print_text += f"\n{count}) {item}"
-    mprint( # Actually print options
+    mprint(  # Actually print options
         tag,
         print_text,
         text_colour=text_colour,
@@ -49,6 +50,7 @@ def cquery(
         log_file=log_file,
     )
     return _get_cquery(options, cprint, lower)
+
 
 def cyn(tag, text, **kwargs):
     return cquery(tag, text, ["y", "n"], lower=True, **kwargs)

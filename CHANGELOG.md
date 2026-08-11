@@ -11,12 +11,16 @@
 ## 1.0.1
 General patches and maintainability updates:
 
-- Fixed bug where using a non-existent file would output "[ERROR]: File '{content}' does not exist."
-- Fixed bug where using a non-existent colour in textcol in cprint (or any function that relies on cprint) would supress the output and only print a warning.
+- Fixed bug where using a non-existent file would output "[ERROR]: File
+  '{content}' does not exist."
+- Fixed bug where using a non-existent colour in textcol in cprint (or any
+  function that relies on cprint) would supress the output and only print a
+  warning.
 - Renamed internal functions to be snake_case.
 - Used black to format to PEP 8.
 
-Yes, this was copied from the commit message, but that's because said commit message was concise and explained what this did well.
+Yes, this was copied from the commit message, but that's because said commit
+message was concise and explained what this did well.
 
 
 ## 1.0.1.post1
@@ -27,7 +31,9 @@ Updated repository link in pyproject.toml to new repository.
 Near-entire rewrite, several breaking changes, new function, and more:
 
 ### Breaking Changes
-- New configuration system. See docs for more info, but to summarise, individual options are modified, either by wrapper functions (config.add_tag()) or manual variable changes.
+- New configuration system. See docs for more info, but to summarise, individual
+options are modified, either by wrapper functions (config.add_tag()) or manual
+variable changes.
 - Renamed parameters: 
   - `stagtype` → `subtag`
   - `logfile` → `log_file`
@@ -48,11 +54,13 @@ Near-entire rewrite, several breaking changes, new function, and more:
   - `config.py`
   - `cprint.py`
   - `cquery.py`
-- Cleaned up a lot of terribly coded internal logic, especially in `cprint()`/`mprint()`.
+- Cleaned up a lot of terribly coded internal logic, especially in
+`cprint()`/`mprint()`.
 - `INTERNAL_SUBSITUTE` now `COLOURS` (from `colours.py`).
 
 ### External Changes
-- Updated docs, not only along with these updates, but also with a note about this library not using American English.
+- Updated docs, not only along with these updates, but also with a note about
+this library not using American English.
 - Updated `examples/test.py` to use the new names of everything.
 - Updated the website to use the new names of everything.
 - Removed `examples/config.json` as file support no longer exists.
@@ -61,3 +69,7 @@ Near-entire rewrite, several breaking changes, new function, and more:
 ## 2.0.0.post1
 - Updated URL ( now https://cerbose.jasperredis.net )
 - Deleted accidental duplicate of test.py
+
+
+## 2.0.1
+- Added `config.log_file` and `conifg.timestamp_default` variables.

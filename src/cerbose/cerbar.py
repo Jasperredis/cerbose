@@ -1,16 +1,16 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
-
-# Cerbose v2.0.0.post1 | made by jasperredis | LGPLv3 (see LICENSE)
+# Cerbose v2.0.1 | made by jasperredis | LGPLv3 (see LICENSE)
 # cerbar module
 
-__version__ = "2.0.0.post1"
+__version__ = "2.0.1"
 
 # Import modules
 from . import config
 
+
 def cerbar(length, total, fill, *, percent=None, count=None):
     """
-    Output an ASCII progress bar (with formatting). https://jasperredis.github.io/cerbose/docs.html?page=docs-cerbar.md
+    Output an ASCII progress bar (with formatting).
     """
     item = total / length
     fillcnt = fill / item

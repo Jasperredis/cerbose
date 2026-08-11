@@ -1,26 +1,26 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
+# Cerbose v2.0.1 | made by jasperredis | LGPLv3 (see LICENSE)
+# cprint/mprint module
 
-# Cerbose v2.0.0.post1 | made by jasperredis | LGPLv3 (see LICENSE)
-# cprint module
+__version__ = "2.0.1"
 
-__version__ = "2.0.0.post1"
-
-# Import libraries
-from colorama import Fore, Style
+from colorama import Style
 import datetime as dt
 import re
-# Import modules
 from .colours import COLOURS
 from . import config
 
 align = 0
 space_repeat_count = 0
 
+
 def _create_tag(tag, subtag, timestamp):
     """Subfunction for cprint/mprint."""
     label = ""
     # Add timestamp
-    if timestamp:
+    timestamp_result = config.timestamp_default if timestamp is None \
+        else timestamp
+    if timestamp_result:
         date = dt.datetime.now()
         time_output = date.strftime(config.time_format)
         time_output = (
@@ -28,7 +28,7 @@ def _create_tag(tag, subtag, timestamp):
         )
         label += time_output
     # Add subtag
-    if subtag != None:
+    if subtag is not None:
         subtag = subtag if subtag in config.tags else "none"
         subtag_text = config.tags[subtag]["text"]
         subtag_colour = config.tags[subtag]["colour"]
@@ -49,18 +49,20 @@ def _create_tag(tag, subtag, timestamp):
         label += tag_output
     return label
 
+
 def _align_pad_label(label):
     """Subfunction for cprint/mprint."""
     global align, space_repeat_count
     # Align
     label_len = len(label)
-    if label_len > align: # Update label length to new longest
+    if label_len > align:  # Update label length to new longest
         align = label_len
         space_repeat_count = 0
     else:
         # Reset space repeat count if over tolerance
         space_repeat_count += 1
-        if space_repeat_count >= config.space_repeat_tolerance and align > label_len:
+        if (space_repeat_count >= config.space_repeat_tolerance and
+                align > label_len):
             align = label_len
             space_repeat_count = 0
     # Add padding
@@ -69,21 +71,28 @@ def _align_pad_label(label):
     label += padding
     return label
 
+
 def _colour_text(text, text_colour):
     """Subfunction for cprint/mprint."""
     if text_colour in COLOURS:
         text = COLOURS[text_colour] + text
     return text
 
+
 def _log(log_file, output):
     """Subfunction for cprint/mprint."""
-    if log_file != None:
-        with open(log_file, "a") as f:
-             f.write(_strip_ansi(output + "\n"))
+    if log_file is False:
+        return
+    log_file_result = config.log_file if log_file is None else log_file
+    if log_file_result is not None:
+        with open(log_file_result, "a") as f:
+            f.write(_strip_ansi(output + "\n"))
+
 
 def _strip_ansi(string):
     """Subfunction for cprint/mprint."""
     return re.sub(r'\x1b\[[0-9;]*m', '', string)
+
 
 def cprint(
     tag,
@@ -91,12 +100,11 @@ def cprint(
     *,
     text_colour="normal",
     subtag=None,
-    timestamp=False,
+    timestamp=None,
     log_file=None,
     as_string=False,
 ):
-    """Print a coloured, tagged message. https://jasperredis.github.io/cerbose/docs.html?page=docs-cprint.md"""
-    global align, space_repeat_count
+    """Print a coloured, tagged message."""
     label = _create_tag(tag, subtag, timestamp)
     label = _align_pad_label(label)
     text_result = _colour_text(text, text_colour)
@@ -107,18 +115,18 @@ def cprint(
     else:
         print(output)
 
+
 def mprint(
     tag,
     text,
     *,
     text_colour="normal",
     subtag=None,
-    timestamp=False,
+    timestamp=None,
     log_file=None,
     as_string=False
 ):
-    """Print a coloured, tagged message, with multiline. Heading "mprint" @ https://jasperredis.github.io/cerbose/docs.html?page=docs-cprint.md"""
-    global align, space_repeat_count
+    """Print a coloured, tagged message, with multiline."""
     text = text.splitlines()
     label = _create_tag(tag, subtag, timestamp)
     label = _align_pad_label(label)
@@ -136,6 +144,7 @@ def mprint(
         return output
     else:
         print(output)
+
 
 def reset_align():
     """
