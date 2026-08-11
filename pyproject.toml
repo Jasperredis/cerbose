@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cerbose"
-version = "2.0.0.post2"
+version = "2.0.1"
 description = "Cerbose is a simple, highly customisable, cross-platform Python logging library that allows for fancy terminal text output, log message tagging, file logging, and additional console-related features, such as cerbar, an ASCII progress bar generator, and more."
 authors = [{name = "jasperredis"}]
 requires-python = ">=3.7"
